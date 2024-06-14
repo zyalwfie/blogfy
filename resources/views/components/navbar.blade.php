@@ -13,9 +13,9 @@
             <a aria-current="{{ request()->is('about') ? 'page' : false }}"
               class="{{ request()->is('about') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' }} rounded-md px-3 py-2 text-sm font-medium"
               href="/about">About</a>
-            <a aria-current="{{ request()->is('blog') ? 'page' : false }}"
-              class="{{ request()->is('blog') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' }} rounded-md px-3 py-2 text-sm font-medium"
-              href="/blog">Blog</a>
+            <a aria-current="{{ request()->is('blogs') ? 'page' : false }}"
+              class="{{ request()->is('blogs') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' }} rounded-md px-3 py-2 text-sm font-medium"
+              href="/blogs">Blog</a>
             <a aria-current="{{ request()->is('contact') ? 'page' : false }}"
               class="{{ request()->is('contact') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' }} rounded-md px-3 py-2 text-sm font-medium"
               href="/contact">Contact</a>
@@ -83,9 +83,9 @@
       <a aria-current="{{ request()->is('about') ? 'page' : false }}"
         class="{{ request()->is('about') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' }} block rounded-md px-3 py-2 text-base font-medium"
         href="/about">About</a>
-      <a aria-current="{{ request()->is('blog') ? 'page' : false }}"
-        class="{{ request()->is('blog') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' }} block rounded-md px-3 py-2 text-base font-medium"
-        href="/blog">Blog</a>
+      <a aria-current="{{ request()->is('blogs') ? 'page' : false }}"
+        class="{{ request()->is('blogs') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' }} block rounded-md px-3 py-2 text-base font-medium"
+        href="/blogs">Blog</a>
       <a aria-current="{{ request()->is('contact') ? 'page' : false }}"
         class="{{ request()->is('contact') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' }} block rounded-md px-3 py-2 text-base font-medium"
         href="/contact">Contact</a>
