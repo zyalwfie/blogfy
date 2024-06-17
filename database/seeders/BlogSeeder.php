@@ -2,7 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Blog;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class BlogSeeder extends Seeder
@@ -12,6 +13,8 @@ class BlogSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        Blog::factory(10)->recycle([
+            User::factory(3)->create()
+        ])->create();
     }
 }

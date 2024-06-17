@@ -11,7 +11,7 @@
                 <img alt="Thumbnail" src="/img/thumbnail.jpg">
               </div>
               <div class="date-category">
-                <time class="text-gray-500" datetime="2020-03-16">{{ $blog->created_at }}</time>
+                <time class="text-gray-500" datetime="2020-03-16">{{ $blog->created_at->diffForHumans() }}</time>
                 <a class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
                   href="#">Marketing</a>
               </div>
@@ -34,10 +34,10 @@
                 <p class="font-semibold text-gray-900">
                   <a href="#">
                     <span class="absolute inset-0"></span>
-                    Michael Foster
+                    {{ $blog->author->name }}
                   </a>
                 </p>
-                <p class="text-gray-600">Co-Founder / CTO</p>
+                <p class="text-gray-600">{{ $blog->author->title }}</p>
               </div>
             </div>
           </article>
