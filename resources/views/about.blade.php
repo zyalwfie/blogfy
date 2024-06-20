@@ -1,5 +1,5 @@
 <x-layout>
-  <x-slot:title>{{ $title }}</x-slot:title>
-  <x-slot:header>{{ $title }}</x-slot:header>
+  <x-slot:title>About</x-slot:title>
+  <x-slot:header>About</x-slot:header>
   <p class="prose">About</p>
 </x-layout>

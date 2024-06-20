@@ -1,24 +1,18 @@
 <?php
 
-use App\Http\Controllers\BlogController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\CategoryController;
 
-Route::get('/', function () {
-    return view('home', [
-        'title' => 'Home'
-    ]);
-});
+Route::view('/', 'home');
 
-Route::get('/about', function () {
-    return view('about', [
-        'title' => 'About'
-    ]);
-});
+Route::view('about', 'about');
 
 Route::resource('/blogs', BlogController::class);
 
-Route::get('/contact', function () {
-    return view('contact', [
-        'title' => 'Contact'
-    ]);
-});
+Route::get('categories/{category}', [CategoryController::class, 'index'])->name('category.index');
+
+Route::get('authors/{user:nickname}', [UserController::class, 'index'])->name('user.index');
+
+Route::view('contact', 'contact');

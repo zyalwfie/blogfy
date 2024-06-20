@@ -5,29 +5,22 @@ namespace App\Models;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Blog extends Model
+class Category extends Model
 {
     use HasFactory, Sluggable;
 
     protected $fillable = [
         'name',
-        'slug',
-        'excerpt',
-        'body'
-    ];
-
-    protected $with = [
-        'author',
-        'category'
+        'slug'
     ];
 
     public function sluggable(): array
     {
         return [
             'slug' => [
-                'source' => 'title'
+                'source' => 'name'
             ]
         ];
     }
@@ -37,13 +30,8 @@ class Blog extends Model
         return 'slug';
     }
 
-    public function author(): BelongsTo
+    public function blogs(): HasMany
     {
-        return $this->belongsTo(User::class);
-    }
-
-    public function category(): BelongsTo
-    {
-        return $this->belongsTo(Category::class);
+        return $this->hasMany(Blog::class);
     }
 }
