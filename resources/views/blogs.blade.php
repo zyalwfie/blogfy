@@ -1,7 +1,10 @@
 <x-layout>
   <x-slot:title>Blogs</x-slot:title>
-  <x-slot:header>Blogs ({{ count($blogs) }} of posts)</x-slot:header>
+  <x-slot:header>Blogs ({{ $counts }} of posts)</x-slot:header>
   <div class="py-6 sm:py-8">
+    <div class="mb-5">
+      {{ $blogs->links() }}
+    </div>
     <div class="mx-auto max-w-7xl">
       <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
         @forelse ($blogs as $blog)
